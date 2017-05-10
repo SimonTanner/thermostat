@@ -61,4 +61,10 @@ describe ('Thermostat',function(){
     expect (thermostat.MaxTemp).toBe(25);
   });
 
+  it('can reset temp to 20 by using reset feature', function(){
+    thermostat.UpTemp();
+    thermostat.Reset();
+    expect(thermostat.temperature).toBe(20);
+  });
+
 });

@@ -34,3 +34,9 @@ Thermostat.prototype.DownTemp = function() {
     return 'You cannot go below ' + this.MinTemp + ' degrees';
   }
 };
+
+Thermostat.prototype.Reset = function() {
+  this.temperature = 20;
+};
+
+
