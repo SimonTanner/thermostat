@@ -22,4 +22,18 @@ describe ('Thermostat',function(){
     expect(thermostat.temperature).toBe(19);
   });
 
+  it('Temperature cannot decrease below 10 degrees', function() {
+    for (var i = 0; i <= 11; i++) {
+      thermostat.DownTemp();
+    }
+    expect(thermostat.temperature).toBe(10);
+  });
+
+  it('If user tries to decrease the temperature below 10 degrees it returns an error msg', function() {
+    for (var i = 0; i <= 11; i++) {
+      thermostat.DownTemp();
+    }
+    expect(thermostat.DownTemp()).toBe('You cannot go below 10 degrees');
+  });
+
 });
