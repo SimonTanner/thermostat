@@ -36,4 +36,15 @@ describe ('Thermostat',function(){
     expect(thermostat.DownTemp()).toBe('You cannot go below 10 degrees');
   });
 
+  it('PowerSaving mode is on by default', function(){
+    expect(thermostat.PowerSaving).toBe(true);
+  });
+
+  it('cannot increase temp above 25 if powersaving mode is on', function(){
+    for (var i = 0; i <= 6; i++) {
+      thermostat.UpTemp();
+    }
+    expect(thermostat.temperature).toBe(25);
+  });
+
 });
