@@ -2,15 +2,22 @@ function Thermostat() {
   this.temperature = 20;
   this.MinTemp = 10;
   this.PowerSaving = true;
-  this.PowerSavingMaxTemp = 25;
+  if (this.PowerSaving = true) {
+    this.MaxTemp = 25;
+  }
+  else {
+    this.MaxTemp = 32;
+  }
+
+  
 }
 
 Thermostat.prototype.UpTemp = function() {
-  if (this.PowerSaving = true && this.temperature < this.PowerSavingMaxTemp) {
-    this.temperature ++;  
+  if (this.temperature < this.MaxTemp) {
+    this.temperature ++;
   }
-  else {
-    return 'If Powersaving mode is on cannot increase temp above' + this.PowerSavingMaxTemp + 'degrees'
+  else{
+    return 'You cannot increase temperature above ' + this.MaxTemp + ' degrees';
   }
 
 };
