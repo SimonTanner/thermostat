@@ -47,4 +47,18 @@ describe ('Thermostat',function(){
     expect(thermostat.temperature).toBe(25);
   });
 
+  it('Cannot increase the temperature above 32 if powersaving is off', function(){
+    thermostat.PowerSavingOff();
+    for (var i = 0; i <= 12; i++) {
+      thermostat.UpTemp();
+    }
+    expect(thermostat.temperature).toBe(32);
+  });
+
+  it('If PowerSaving is turned off and on again the max temp is 25', function() {
+    thermostat.PowerSavingOff();
+    thermostat.PowerSavingOn();
+    expect (thermostat.MaxTemp).toBe(25);
+  });
+
 });

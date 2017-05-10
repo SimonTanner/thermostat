@@ -2,21 +2,25 @@ function Thermostat() {
   this.temperature = 20;
   this.MinTemp = 10;
   this.PowerSaving = true;
-  if (this.PowerSaving = true) {
-    this.MaxTemp = 25;
-  }
-  else {
-    this.MaxTemp = 32;
-  }
-
-  
+  this.MaxTemp = 25;
 }
+
+
+Thermostat.prototype.PowerSavingOff = function() {
+  this.PowerSaving = false;
+  this.MaxTemp = 32;
+};
+
+Thermostat.prototype.PowerSavingOn = function() {
+  this.PowerSaving = true;
+  this.MaxTemp = 25;
+};
 
 Thermostat.prototype.UpTemp = function() {
   if (this.temperature < this.MaxTemp) {
     this.temperature ++;
   }
-  else{
+  else {
     return 'You cannot increase temperature above ' + this.MaxTemp + ' degrees';
   }
 
