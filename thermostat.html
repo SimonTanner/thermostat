@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Jasmine Spec Runner v2.6.1</title>
+  <title>THERMOSTAT</title>
   <script src="src/Thermostat.js"></script>
-  <script src='src/jquery-3.2.1.js'></script>
-  <script src='src/interface.js'></script>
+  <script src="src/Jquery.js"></script>
+  <script src="src/interface.js"></script>
   <style>
   .layout {
     float: none;
@@ -23,29 +23,19 @@
 </head>
 <body>
   <h1 style='text-align:center;'>Thermostat</h1>
-<h2 style='text-align:center;'>Current Temperature: </h2>
+<h2 style='text-align:center;'>Current Temperature: <span id="temperature"></span> </h2>
 <h3 style='text-align:center;'>Power Saving Mode is: </h3>
 <h3 class='layout'>CONTROLS</h3>
-  <form class='layout2'>
-    <button name="up" type="submit" value="Up" id='up'>Up</button>
-  </form>
-  <form class='layout'>
-    <button name="down" type='click' value="Down" id='down'>Down</button>
-  </form>
-  <p>
-  </p>
-  <form class='layout'>
-    <button name="PSOn" type="submit" value="Power Saving On">Power Saving On</button>
-  </form>
-  <p>
-  </p>
-  <form class='layout'>
-    <button name="PSOff" type="submit" value="Power Saving Off">Power Saving Off</button>
-  </form>
-  <p>
-  </p>
-  <form action='' method='' class='layout'>
-    <button name="reset" type="submit" value="reset">Reset</button>
-  </form>
+  <section class='layout'>
+    <button id='up' name="up" value="Up" >Up</button>
+    <button id='down'name="down" value="Down" >Down</button>
+    <br>
+    <button id='PSOn' name="PSOn" value="Power Saving On">Power Saving On</button>
+    <br>
+    <button id='PSOff' name="PSOff" value="Power Saving Off">Power Saving Off</button>
+    <br>
+    <button id='reset' name="reset" value="reset">Reset</button>
+  </section>
+
 </body>
 </html>

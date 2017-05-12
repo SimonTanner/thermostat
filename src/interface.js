@@ -1,8 +1,25 @@
-$(document).ready(function() {
-  console.log(1);
-  var thermostat = new Thermostat();
-  console.log(thermostat);
-  console.log(2);
-  // $('#temperature').text(thermostat.temperature);
-  console.log(3);
-});
+(function() {
+  'use strict';
+  $(document).ready(function() {
+    var thermostat = new Thermostat();
+    $('#temperature').text(thermostat.temperature);
+    $('#up').click(function() {
+      thermostat.UpTemp();
+      $('#temperature').text(thermostat.temperature);
+    });
+    $('#down').click(function() {
+      thermostat.DownTemp();
+      $('#temperature').text(thermostat.temperature);
+    });
+    $('#PSOn').click(function() {
+      thermostat.PowerSavingOn();
+    });
+    $('#PSoff').click(function() {
+      thermostat.PowerSavingOff();
+    });
+    $('#reset').click(function() {
+      thermostat.Reset();
+      $('#temperature').text(thermostat.temperature);
+    });
+  });
+}());

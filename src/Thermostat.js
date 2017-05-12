@@ -38,5 +38,3 @@ Thermostat.prototype.DownTemp = function() {
 Thermostat.prototype.Reset = function() {
   this.temperature = 20;
 };
-
-
