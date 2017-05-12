@@ -4,23 +4,44 @@
   <meta charset="utf-8">
   <title>Jasmine Spec Runner v2.6.1</title>
   <script src="src/Thermostat.js"></script>
+  <style>
+  .layout {
+    float: none;
+    /*justify-content: flex-end;*/
+    margin-left: 100px;
+  }
+  </style>
+  <style>
+  .layout2 {
+    float: left;
+    /*justify-content: flex-end;*/
+    margin-left: 100px;
+  }
+  </style>
 </head>
 <body>
-<h3>Current Temperature: </h3>
-<h3>Power Saving Mode is: </h3>
-  <form action='' method=''>
+<h1 style='text-align:center;'>Current Temperature: </h1>
+<h2 style='text-align:center;'>Power Saving Mode is: </h2>
+<h3 class='layout'>CONTROLS</h3>
+  <form action='' method='' class='layout2'>
     <button name="up" type="submit" value="Up">Up</button>
   </form>
-  <form action='' method=''>
+  <form action='' method='' class='layout'>
     <button name="down" type="submit" value="Down">Down</button>
   </form>
-  <form action='' method=''>
+  <p>
+  </p>
+  <form action='' method='' class='layout'>
     <button name="powersavingon" type="submit" value="Power Saving On">Power Saving On</button>
   </form>
-  <form action='' method=''>
+  <p>
+  </p>
+  <form action='' method='' class='layout'>
     <button name="powersavingoff" type="submit" value="Power Saving Off">Power Saving Off</button>
   </form>
-  <form action='' method=''>
+  <p>
+  </p>
+  <form action='' method='' class='layout'>
     <button name="reset" type="submit" value="reset">Reset</button>
   </form>
 </body>
