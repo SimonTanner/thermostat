@@ -2,24 +2,39 @@
   'use strict';
   $(document).ready(function() {
     var thermostat = new Thermostat();
+    var PS;
+    if (thermostat.PowerSaving) {
+      PS = 'ON';
+    } else {
+      PS = 'OFF';
+    }
+    $('#PowerSaving').text(PS);
     $('#temperature').text(thermostat.temperature);
     $('#up').click(function() {
       thermostat.UpTemp();
-      $('#temperature').text(thermostat.temperature);
+      UpdateTemp();
     });
     $('#down').click(function() {
       thermostat.DownTemp();
-      $('#temperature').text(thermostat.temperature);
+      UpdateTemp();
     });
     $('#PSOn').click(function() {
       thermostat.PowerSavingOn();
+      PS = 'ON';
+      $('#PowerSaving').text(PS);
     });
-    $('#PSoff').click(function() {
+    $('#PSOff').click(function() {
       thermostat.PowerSavingOff();
+      PS = 'OFF';
+      $('#PowerSaving').text(PS);
     });
     $('#reset').click(function() {
       thermostat.Reset();
-      $('#temperature').text(thermostat.temperature);
+      UpdateTemp();
     });
+    function UpdateTemp() {
+      $('#temperature').text(thermostat.temperature);
+      $('#temperature').attr('class', thermostat.Usage());
+    }
   });
 }());
