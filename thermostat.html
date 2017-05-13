@@ -6,7 +6,6 @@
   <script src="src/Thermostat.js"></script>
   <script src="src/Jquery.js"></script>
   <script src="src/interface.js"></script>
-  <script src='css-style.html'></script>
   <style>
   .low-usage {
     color: green;
@@ -36,8 +35,10 @@
 </head>
 <body>
   <h1 style='text-align:center;'>Thermostat</h1>
-  <h2 style='text-align:center;'>Current Temperature: <span id="temperature" ></span> </h2>
+  <h2 style='text-align:center;'>Temperature: <span id="temperature" ></span>&deg;</h2>
   <h3 style='text-align:center;'>Power Saving Mode is: <span id='PowerSaving'></span></h3 >
+  <h3 style='text-align:center;'>Current Location: <span id='Location' style='color:blue;'></span> Weather: <span id='Weather' style='color:blue;'></span>
+  Temperature: <span id='ExtTemp' style='color:blue;'></span>&deg;</h3>
   <h3 class='layout'>CONTROLS</h3>
     <section class='layout'>
       <button id='up' name="up" value="Up" >Up</button>
